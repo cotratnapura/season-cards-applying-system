@@ -1,0 +1,60 @@
+body {
+  font-family: Arial;
+}
+
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 15mm;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.main-table th,
+.main-table td {
+  border: 1px solid black;
+  padding: 4px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.print-area {
+  display: none;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .print-area,
+  .print-area * {
+    visibility: visible;
+  }
+
+  .print-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
